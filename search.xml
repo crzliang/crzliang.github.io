@@ -4,37 +4,6 @@
   
     
     <entry>
-      <title>容器逃逸漏洞复现（CVE-2024-21626）</title>
-      <link href="/archives/26744/"/>
-      <url>/archives/26744/</url>
-      
-        <content type="html"><![CDATA[<h1 id="起因">起因</h1><p>很早就知道了这个漏洞得存在，但是一直没有去复现也没有想着去写文章记录，是因为看了网上的文章都写得很好了，自己也没有写的必要。但是为什么现在又写了呢，是因为在3月5日早上9点半，我收到了来自阿里云的短信，说我的服务器存在挖矿的现象，需要整改，我一脸懵</p><p><img src="D:%5Cpost-img%5Cimage-20240321160015703.png" alt="image-20240321160015703"></p><p>然后我上阿里云的app上看了详细的问题，原来是存在<strong>由runc文件描述符泄露导致容器逃逸漏洞（CVE-2024-21626）</strong>，这是因为我没有升级runc版本，然后还用docker起了一个dvwa靶场导致的</p><p><img src="D:%5Cpost-img%5Cimage-20240321160348824.png" alt="image-20240321160348824"></p><h1 id="复现">复现</h1><h2 id="环境版本">环境版本</h2><p>影响版本：&gt;=v1.0.0-rc93, &lt;=1.1.11</p><p>我现在复现所使用的环境的版本就在影响范围内</p><p><img src="D:%5Cpost-img%5Cimage-20240321160447751.png" alt="image-20240321160447751"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 漏洞复现 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 容器 </tag>
-            
-            <tag> 逃逸 </tag>
-            
-            <tag> 漏洞 </tag>
-            
-            <tag> 复现 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Freefloat FTP Server1.0 溢出漏洞复现</title>
       <link href="/archives/23677/"/>
       <url>/archives/23677/</url>
