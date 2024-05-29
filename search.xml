@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>使用vercel部署wowchemy学术网站</title>
+      <link href="/archives/52454/"/>
+      <url>/archives/52454/</url>
+      
+        <content type="html"><![CDATA[<h1 id="起因">起因</h1><blockquote><p>在搜索资料的时候看到了北大的一个科研组的主页，使用Hugo Blox（以前称为 Wowchemy Hugo Modules） Web 框架构建的。其中Research Group模板，很简洁，感觉还不错，就想把协会的主页给换了。</p><p>协会原有的主页是用的docusaurus搭建的，这个更像一种文档文库，不太适合用于主页展示。</p></blockquote><h1 id="部署">部署</h1><p>部署和自定义的过程并不难，跟着官方文档走即可</p><p><a href="https://docs.hugoblox.com/">官方文档</a></p><p>使用Netlify进行部署会简单很多，但是我不喜欢它的添加自己域名的那一块，所以我就选择了vercel部署，但是官方给的教程过于简略，有点过时了，并不适合当前的vercel环境</p><h1 id="vercel部署注意事项">vercel部署注意事项</h1><p>如果只按照官方文档给的教程去部署，百分百失败，部署最后一定会提示<strong>部署时长超过了，vercel所支持的最大部署时长45分钟</strong>，这是翻译过的，大致意思就是这样。</p><p>这是因为vercel目前默认的node.js版本是20.x，这个版本安装附加包是使用 <code>dnf install-y package-name</code></p><p>所以当我们使用默认的环境时，安装golang依赖就要使用 <code>dnf install-y golang</code>而不是 <code>yum -y install golang</code>，这个命令是适用于18.x版本的node.js</p><p><a href="https://vercel.com/docs/deployments/build-image">vercel镜像说明</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vercel </tag>
+            
+            <tag> wowchemy </tag>
+            
+            <tag> 学术网站 </tag>
+            
+            <tag> hugo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Freefloat FTP Server1.0 溢出漏洞复现</title>
       <link href="/archives/23677/"/>
       <url>/archives/23677/</url>
@@ -49,11 +80,11 @@
             
             <tag> 网络渗透测试技术实验 </tag>
             
-            <tag> 应急响应技术 </tag>
-            
             <tag> Windows </tag>
             
             <tag> Linux </tag>
+            
+            <tag> 应急响应技术 </tag>
             
         </tags>
       
@@ -80,11 +111,11 @@
             
             <tag> 网络渗透测试技术实验 </tag>
             
+            <tag> 权限维持技术 </tag>
+            
             <tag> Windows </tag>
             
             <tag> Linux </tag>
-            
-            <tag> 权限维持技术 </tag>
             
         </tags>
       
