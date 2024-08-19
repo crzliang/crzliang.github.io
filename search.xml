@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>github_actions_deploys_docusaurus_to_the_server</title>
+      <link href="/archives/36330/"/>
+      <url>/archives/36330/</url>
+      
+        <content type="html"><![CDATA[<h2 id="条件">条件</h2><ul><li>拥有GitHub账号</li><li>已经构建好docusaurus</li><li>拥有自己的服务器</li></ul><h2 id="部署">部署</h2><h3 id="服务器生成ssh密钥">服务器生成ssh密钥</h3><p>运行 <code>ssh-keygen</code>命令即可生成公钥和私钥，只要把私钥添加到项目的仓库环境变量中即可</p><p>进入到你要用于ssh连接的用户的.ssh目录下，读取私钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure><h3 id="添加仓库环境变量">添加仓库环境变量</h3><p>分别添加下面三个变量</p><table><thead><tr><th>变量名</th><th>说明</th></tr></thead><tbody><tr><td><code>REMOTE_HOST</code></td><td>服务器IP或域名</td></tr><tr><td><code>REMOTE_USER</code></td><td>用户ssh连接的用户名，要和上面提供私钥的用户相对应</td></tr><tr><td><code>SSH_PRIVATE_KEY</code></td><td>私钥</td></tr></tbody></table><p><img src="https://img.crzliang.cn/img/202407210018512.png" alt="image-20240721001359040"></p><h3 id="工作流代码">工作流代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前工作流的名称</span></span><br><span class="line">name: docusaurus-deploy</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - main</span><br><span class="line"></span><br><span class="line"><span class="built_in">jobs</span>: <span class="comment"># 构建的任务，一个工作流有多个构建任务，</span></span><br><span class="line">  build-and-deploy:</span><br><span class="line">    runs-on: ubuntu-latest <span class="comment"># 在什么服务器上面执行这些任务，这里使用最新版本的ubuntu</span></span><br><span class="line">  </span><br><span class="line">    steps: <span class="comment"># 构建任务的步骤，一个任务可分为多个步骤</span></span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@v4</span><br><span class="line">      <span class="comment"># 步骤2 给当前服务器安装node</span></span><br><span class="line">      - name: use node</span><br><span class="line">        uses: actions/setup-node@v4</span><br><span class="line">        with:</span><br><span class="line">          node-version: 21</span><br><span class="line">          cache: <span class="string">&quot;npm&quot;</span></span><br><span class="line">      <span class="comment"># 步骤3 下载项目依赖  </span></span><br><span class="line">      - name: install</span><br><span class="line">        run: npm install</span><br><span class="line">      <span class="comment"># 步骤4 打包node项目</span></span><br><span class="line">      - name: build</span><br><span class="line">        run: npm run build</span><br><span class="line">      <span class="comment"># 步骤5 部署项目到服务器</span></span><br><span class="line">      - name: ssh deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v5.0.3</span><br><span class="line">        with:</span><br><span class="line">      <span class="comment"># SSH 密钥对的私钥部分</span></span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.SSH_PRIVATE_KEY &#125;</span>&#125;</span><br><span class="line">      <span class="comment"># Remote host</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">      <span class="comment"># Remote user</span></span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">      <span class="comment"># 源目录，相对于`$GITHUB_WORKSPACE`根的路径，我是部署docusaurus，，对应的目录就是构建好代码的存放目录：build</span></span><br><span class="line">          SOURCE: <span class="string">&quot;build&quot;</span></span><br><span class="line">      <span class="comment"># 在 rsync 之前在主机上运行的脚本，这个目录因人而异</span></span><br><span class="line">          SCRIPT_BEFORE: <span class="string">&quot;mkdir -p ~/docusaurus/build&quot;</span></span><br><span class="line">      <span class="comment"># 目标目录，这个目录和上面的对应即可，也是因人而异</span></span><br><span class="line">          TARGET: <span class="string">&quot;~/docusaurus/&quot;</span></span><br></pre></td></tr></table></figure><h2 id="参考">参考</h2><ul><li><a href="https://luvsia.com/code/github-actions-deploy.html">https://luvsia.com/code/github-actions-deploy.html</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+            <tag> GitHub actions </tag>
+            
+            <tag> docusaurus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ISCC-2024</title>
       <link href="/archives/35796/"/>
       <url>/archives/35796/</url>
@@ -111,11 +140,11 @@
             
             <tag> 网络渗透测试技术实验 </tag>
             
+            <tag> 应急响应技术 </tag>
+            
             <tag> Windows </tag>
             
             <tag> Linux </tag>
-            
-            <tag> 应急响应技术 </tag>
             
         </tags>
       
@@ -142,11 +171,11 @@
             
             <tag> 网络渗透测试技术实验 </tag>
             
-            <tag> 权限维持技术 </tag>
-            
             <tag> Windows </tag>
             
             <tag> Linux </tag>
+            
+            <tag> 权限维持技术 </tag>
             
         </tags>
       
@@ -310,9 +339,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -630,9 +659,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -711,9 +740,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> CTF </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
